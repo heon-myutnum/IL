@@ -12,9 +12,9 @@
 
 **2. Rosenblatt's Perceptron Learning Rule: 틀린 Example-> Weight 수정**
   - 두 Class의 Label를 +1, -1로 두고, Bias를 Weight Vector에 포함하면, 잘못 판단한 Example에 다음  Update를 적용할 수 있음.  
-  \[
+$$
 W\leftarrow W+\eta yX
-\] 
+$$ 
   X: 현재 Example의 Input Vector, y: 현재 Example의 Label, n: Update 크기를 정하는 Learning Rate  
   - Positive Example을 Negative로 판단하면 해당 Example쪽으로 판단을 이동시키고, Negative Example을 Positive로 판단했다면 반대 방향으로 이동시킴  
   - Linearly Separable Data라면 유한한 Update 뒤에 모든 Training Example을 올바르게 판단할 수 있음!  
@@ -35,9 +35,9 @@ W\leftarrow W+\eta yX
     * 평가 기준을 조금 나아진 정도도 보여주는 Loss로 만듬
 
 **5. Sigmoid 함수: 중간 정도의 판단 표현**
-  - \[
+  - $$
 \sigma(z)=\frac{1}{1+e^{-z}}
-\]  
+$$
   Sigmoid Output은 0이나 1이 아닌, 그 사이의 값을 출력
   - 같은 틀린 판단이라도 0.1->0.4로 변하면, Target이 1인 경우 더 가까워졌다는 것을 확인할 수 있음
-  - Binary Classfication에서는 이를 \(P(Y=1\mid X)\)에 대한 Estimate로 해석
+  - Binary Classfication에서는 이를 $$P(Y=1\mid X)$$에 대한 Estimate로 해석
